@@ -20,3 +20,7 @@ A Detective Conan-inspired memory game where players match character pairs withi
 5. As a user, I want to identify a Detective Conan character by name on a separate page so that I can earn extra points.
 
 ## Figma Prototype
+![Welcome page of the memory mystery game](./prototype/MM-prototype1.png)
+
+![Welcome page of the memory mystery game](./prototype/MM-prototype2.png)
+
