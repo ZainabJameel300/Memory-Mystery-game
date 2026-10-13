@@ -1,7 +1,7 @@
 # Memory Mystery Game
 
 ## Overview
-Memory Mystery is a memory card game inspired by the Detective Conan world. To win the game you have to memorize and match the diffrent detective conan characters togather.
+A Detective Conan-inspired memory game where players match character pairs within 60 seconds and test their detective knowledge in a bonus round.
 
 ## Technologies used
 1. HTML
