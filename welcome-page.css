@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #101F35;
+    min-height: 100vh;
+    overflow-x: hidden
+}
+.main-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    gap: 10px;
+}
+ .tie{
+    display: flex;
+    flex-direction: row; 
+    gap: 50px;
+ }
+ #line1,#line2{
+  transform: rotate(90deg);
+ }
+ #bow-image{
+  height: 100px;
+  width: 100px;
+ }
+
+ .title{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+ }
+
+ h1{
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 80px;
+    color: #F5E9D3;
+    margin:0 0 5px;
+
+ }
+
+ h4{
+    font-family: "Inter", sans-serif;
+    font-size: 30px ;
+    color: #BDA77E;
+    margin-top: 5px;
+    text-align: center;
+ }
+ #line3{
+    width: 250px;
+    text-align: center;
+ }
+ #start-button{
+    height: 50px;
+    width: 170px;
+    border-radius: 18px;
+    background-color: #B51F35;
+    border: none;
+    margin-top: 30px;
+ }
+ a{
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+   
+ }
+ #footsteps-image{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: clamp(160px, 35vw, 460px);
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    object-position: top right;
+  
+ }
+ #welcome-image{
+    position: fixed;
+    bottom: -42px;
+    left: 0;
+    width: clamp(230px, 28vw, 365px);
+    height: auto;
+    max-height: 45vh;
+    object-fit: contain;
+    object-position: bottom left;
+    z-index: 0;
+ }
+
+ 
