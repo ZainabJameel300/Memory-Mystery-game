@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #101F35;
+}
+.top-section{
+display: flex;
+flex-direction: column-reverse;
+
+}
+.time-score{
+    display: flex;
+    margin-top: 15px;
+    margin-left:35px ;
+    gap:15px
+}
+
+#time-div, #score-div{
+    height: 50px;
+    width: 150px;
+    background-color: #F5E9D3;
+    border-radius: 25px;
+    padding-left: 10px;
+
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.tie{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+#bow-image{
+ height: 60px;
+ width: 60px;
+}
+#line1,#line2{
+    transform: rotate(90deg);
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+ }
+
+ h1{
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 35px;
+    color: #F5E9D3;
+    margin:0 0 5px;
+    text-align: center;
+
+ }
+
+ /* h4{
+    font-family: "Inter", sans-serif;
+    font-size: 18px ;
+    color: #BDA77E;
+    margin-top: 5px;
+    text-align: center;
+ } */
+ /* #line3{
+    width: 100px;
+    text-align: center;
+ } */
+ #culprit-image{
+    position: fixed;
+    bottom: -42px;
+    left: 0;
+    width: clamp(180px, 20vw, 280px);
+    height: auto;
+    max-height: 45vh;
+    object-fit: contain;
+    object-position: bottom left;
+    z-index: 0;
+ }
+ #Conf-DC{
+    position: fixed;
+    top: -20px;
+    right: -70px;
+    width: clamp(100px, 30vw, 200px);
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    object-position: top right;
+  
+ }
+ #capsule-image{
+    position: fixed;
+    bottom: 45px;
+    right: -30px;
+    width: clamp(90px, 20vw, 170px);
+    height: auto;
+    max-height: 45vh;
+    object-fit: contain;
+    object-position: bottom right;
+ }
+
+ .card-container{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(3,100px);
+    row-gap: 50px;
+    column-gap: 20px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    
+ }
+ .back-card-image{
+  height: 150px;
+  width: 100px;
+ }
+
+ #restart-btn{
+    height: 50px;
+    width: 170px;
+    border-radius: 18px;
+    background-color: #B51F35;
+    border: none;
+    align-self: center;
+    margin-top: 45px;
+    color: white;
+    font-size: 25px;
+ }
+ #time,#score{
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+ }
