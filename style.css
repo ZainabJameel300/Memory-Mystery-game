@@ -8,14 +8,15 @@ body{
     background-color: #101F35;
 }
 .top-section{
-display: flex;
-flex-direction: column-reverse;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 35px;
 
 }
 .time-score{
     display: flex;
-    margin-top: 15px;
-    margin-left:35px ;
+    margin: 0;
     gap:15px
 }
 
@@ -31,6 +32,7 @@ flex-direction: column-reverse;
 .header{
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 .tie{
     margin-top: 25px;
@@ -48,15 +50,17 @@ flex-direction: column-reverse;
     transform: rotate(90deg);
 }
 .title{
+    grid-column: 2;
+    justify-self: center;
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
+    align-items: center;
+    margin: 0;
  }
 
  h1{
     font-family: "Protest Guerrilla", sans-serif;
-    font-size: 35px;
+    font-size: 40px;
     color: #F5E9D3;
     margin:0 0 5px;
     text-align: center;
@@ -78,7 +82,7 @@ flex-direction: column-reverse;
     position: fixed;
     bottom: -42px;
     left: 0;
-    width: clamp(180px, 20vw, 280px);
+    width: clamp(155px, 20vw, 240px);
     height: auto;
     max-height: 45vh;
     object-fit: contain;
@@ -108,20 +112,21 @@ flex-direction: column-reverse;
  }
 
  .card-container{
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(4,100px);
     grid-template-rows: repeat(3,100px);
-    row-gap: 50px;
-    column-gap: 20px;
+    row-gap: 70px;
+    column-gap: 80px;
     align-content: center;
     justify-content: center;
     align-items: center;
     
  }
  .back-card-image{
-  height: 150px;
-  width: 100px;
+  height: 160px;
+  width: 150px;
  }
 
  #restart-btn{
@@ -134,8 +139,9 @@ flex-direction: column-reverse;
     margin-top: 45px;
     color: white;
     font-size: 25px;
+    margin-bottom: 25px;
  }
- #time,#score{
+  #time,#score{
   font-family: "Inter", sans-serif;
   font-weight: 700;
  }
