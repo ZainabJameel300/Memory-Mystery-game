@@ -1,3 +1,4 @@
+
 //-------------------Cached consts and constants--------------------------------------
 const timeElement = document.querySelector('#time-value')
 const scoreElement = document.querySelector('#score-value')
@@ -153,6 +154,7 @@ function checkForMatch(){
     scoreElement.textContent = ` ${score}`
     cards[firstCardIndex].isMatched=true
     cards[secondCardIndex].isMatched=true
+    checkGameOver()
     firstCard=null
     secondCard=null
     firstCardElm=null
@@ -160,7 +162,7 @@ function checkForMatch(){
     firstCardIndex=null
     secondCardIndex=null
  }
-  //if not lock the cards by setting the lock=true and call the flipCard()
+  //if not locked the cards by setting the lock=true and call the flipCard()
   else{
     isLocked=true
     flipCardBack()
@@ -194,10 +196,49 @@ function startTimer(){
         if(time<=0){
             clearInterval(timeInterval)
             gameOver=true
-            console.log("Game is Over!")
+            Swal.fire({
+             title: "Oh No 😕! ",
+             text: "Time Run out!",
+             background:"#F5E9D3",
+             imageUrl: "./assets/msg-image.png",
+             imageWidth: 200,
+             imageHeight: 200,
+             imageAlt: "detective conan with a magnifying glass",
+             showConfirmButton: false,
+             html:' <div class="msg-btn"> <button id="restart-btn">Replay</button> <button id="bonus-btn">Bonus Round</button></div> ',
+        
+});
         }
     },1000)
 }
+
+function checkGameOver(){
+    const gameFinshed = cards.every((oneCard)=>{
+     return oneCard.isMatched
+    })
+
+    if(gameFinshed){
+        clearInterval(timeInterval)
+        gameOver=true
+        Swal.fire({
+         title: "congratulations!",
+         text: "You'ld make a great detective!",
+         background:"#F5E9D3",
+         imageUrl: "./assets/msg-image.png",
+         imageWidth: 200,
+         imageHeight: 200,
+         imageAlt: "detective conan with a magnifying glass",
+         showConfirmButton: false,
+         html:' <div class="msg-btn"> <button id="restart-btn">Replay</button> <button id="bonus-btn">Bonus Round</button></div> ',
+        
+});
+    }
+
+}
+
+// function restartGame(){
+
+// }
 
 
 
@@ -205,6 +246,8 @@ function startTimer(){
 for(let i=0; i<cardsElements.length; i++){
     cardsElements[i].addEventListener('click', clickCard)
 }
+
+// restartBtnElement.addEventListener('click',restartGame)
 
 shuffelCards()
 

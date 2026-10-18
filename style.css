@@ -21,6 +21,7 @@ body{
 }
 
 #time-div, #score-div{
+    margin-top: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,21 +37,23 @@ body{
     flex-direction: column;
     min-height: 100vh;
 }
-.tie{
-    margin-top: 25px;
+.title-decoration{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    
+    align-items: center;
+    justify-content: center;
 }
 
 #bow-image{
- height: 60px;
+ height: 45px;
  width: 60px;
+ object-fit: contain;
 }
-/* #line1,#line2{
-    transform: rotate(90deg);
-} */
+.title-dash{
+    width: 80px;
+    border: 0;
+    border-top: 1px solid #F5E9D3;
+    margin: 0;
+}
 .title{
     grid-column: 2;
     justify-self: center;
@@ -62,24 +65,16 @@ body{
 
  h1{
     font-family: "Protest Guerrilla", sans-serif;
-    font-size: 40px;
+    font-size: 35px;
     color: #F5E9D3;
     margin:0 0 5px;
     text-align: center;
 
  }
-
- /* h4{
-    font-family: "Inter", sans-serif;
-    font-size: 18px ;
-    color: #BDA77E;
-    margin-top: 5px;
-    text-align: center;
- } */
- /* #line3{
-    width: 100px;
-    text-align: center;
- } */
+/* This code is inspired from this web pages 
+ 1- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-position 
+ 2- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp
+ */
  #culprit-image{
     position: fixed;
     bottom: -42px;
@@ -91,6 +86,10 @@ body{
     object-position: bottom left;
     z-index: 0;
  }
+ /* This code is inspired from this web pages 
+ 1- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-position 
+ 2- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp
+ */
  #Conf-DC{
     position: fixed;
     top: -20px;
@@ -102,6 +101,10 @@ body{
     object-position: top right;
   
  }
+ /* This code is inspired from this web pages 
+ 1- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-position 
+ 2- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp
+ */
  #capsule-image{
     position: fixed;
     bottom: 45px;
@@ -114,7 +117,7 @@ body{
  }
 
  .card-container{
-    margin-top: 80px;
+    margin-top: 50px;
     margin-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(4,100px);
@@ -131,11 +134,30 @@ body{
   width: 158px;
  }
 
+ .msg-btn{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 20px;
+ }
+
  #restart-btn{
     height: 50px;
     width: 170px;
     border-radius: 18px;
-    background-color: #B51F35;
+    background-color: #101F35;
+    border: none;
+    align-self: center;
+    margin-top: 45px;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+ }
+ #bonus-btn{
+   height: 50px;
+    width: 170px;
+    border-radius: 18px;
+    background-color: #101F35;
     border: none;
     align-self: center;
     margin-top: 45px;
@@ -155,4 +177,7 @@ body{
    color: #B51F35;
    font-family: "Protest Guerrilla", sans-serif;
    
+ }
+ #bottom-dash{
+   width: 150px;
  }

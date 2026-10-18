@@ -24,3 +24,11 @@ A Detective Conan-inspired memory game where players match character pairs withi
 
 ![Welcome page of the memory mystery game](./prototype/MM-prototype2.png)
 
+## Refrences
+ 1. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-position
+ 
+ 2. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp
+
+ 3. https://sweetalert2.github.io/
+
+

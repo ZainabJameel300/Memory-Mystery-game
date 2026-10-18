@@ -73,7 +73,11 @@ body{
   font-family: "Inter", sans-serif;
    
  }
- #footsteps-image{
+ /* This code is inspired from this web pages 
+ 1- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-position 
+ 2- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp
+ */
+ #footsteps-image{ 
     position: fixed;
     top: 0;
     right: 0;
@@ -84,6 +88,10 @@ body{
     object-position: top right;
   
  }
+ /* This code is inspired from this web pages 
+ 1- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-position 
+ 2- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp
+ */
  #welcome-image{
     position: fixed;
     bottom: -42px;
