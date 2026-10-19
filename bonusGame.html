@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Mystery Game</title>
+    <link rel="stylesheet" href="./bonusGame.css">
+    <script defer src="./bonusGame.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Protest+Guerrilla&display=swap');
+</style>
+</head>
+<body>
+    <img id="Conf-DC" src="./assets/Confidential Detective Case Files.png" alt="footsteps image">
+    <div class="header">
+    <div class="top-section">
+        <div class="time-score">
+    <div id="time-div"><p id="time"><span id="time-value">30</span>s</p></div>
+    <div id="score-div"><p id="score"><span id="score-value">0</span>/5</p></div>
+ </div>
+ <header class="title">
+    <div class="title-decoration">
+        <hr class="title-dash">
+        <img id="bow-image" src="./assets/bow-image.png" alt="Detective Conan bow">
+        <hr class="title-dash">
+    </div>
+    <h1>Memory Mystery</h1>
+    <hr id="bottom-dash">
+ </header>
+ </div>
+    <center><div class="questions-container">
+        <h2 class="trivia-question">Detective Conan Trivia Questions</h1>
+            <hr id="question-dash">
+        <h3 id="questions">The Question goes here</h2>
+            <button class="Answer">Answer 1 Goes here</button>
+            <button class="Answer">Answer 2 Goes here</button>
+            <button class="Answer">Answer 3 Goes here</button>
+            <button class="Answer">Answer 4 Goes here</button>
+
+    </div>
+    </center>
+     <div class="msg-btn"> 
+        <button id="restart-btn">Replay</button> 
+        <button id="goback-btn"><a href="./index.html">Go Back</a> </button></div> 
+    </div>
+    <img id="culprit-image" src="./assets/culprit-sec-img.png" alt="Detective Conan Culprit Image">
+    <img id="capsule-image" src="./assets/capsule.png" alt="APT capsule Image">
+</body>
+</html>

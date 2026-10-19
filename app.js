@@ -4,6 +4,7 @@ const timeElement = document.querySelector('#time-value')
 const scoreElement = document.querySelector('#score-value')
 const cardsElements = document.querySelectorAll('.back-card-image')
 const restartBtnElement = document.querySelector('#restart-btn')
+const bonusRoundElement = document.querySelector('#bonus-btn')
 const cards=[
     {
         name:'Edogawa Conan',
@@ -204,9 +205,6 @@ function startTimer(){
              imageWidth: 200,
              imageHeight: 200,
              imageAlt: "detective conan with a magnifying glass",
-             showConfirmButton: false,
-             html:' <div class="msg-btn"> <button id="restart-btn">Replay</button> <button id="bonus-btn">Bonus Round</button></div> ',
-        
 });
         }
     },1000)
@@ -228,17 +226,39 @@ function checkGameOver(){
          imageWidth: 200,
          imageHeight: 200,
          imageAlt: "detective conan with a magnifying glass",
-         showConfirmButton: false,
-         html:' <div class="msg-btn"> <button id="restart-btn">Replay</button> <button id="bonus-btn">Bonus Round</button></div> ',
         
 });
     }
 
 }
 
-// function restartGame(){
+function restartGame(){
+ clearInterval(timeInterval)
+ shuffelCards()
+ firstCard = null
+ secondCard = null 
 
-// }
+ firstCardElm = null
+ secondCardElm = null 
+
+ firstCardIndex = null 
+ secondCardIndex = null
+
+ time = 45
+ score= 0
+ timeInterval=null
+ gameOver = false 
+ isLocked= false
+
+ for(let i=0; i<cards.length; i++){
+    cardsElements[i].src= backCardImage
+    cards[i].isFlipped = false
+    cards[i].isMatched=false
+ }
+ timeElement.textContent = time
+ scoreElement.textContent = score
+
+}
 
 
 
@@ -247,7 +267,7 @@ for(let i=0; i<cardsElements.length; i++){
     cardsElements[i].addEventListener('click', clickCard)
 }
 
-// restartBtnElement.addEventListener('click',restartGame)
+restartBtnElement.addEventListener('click',restartGame)
 
 shuffelCards()
 
