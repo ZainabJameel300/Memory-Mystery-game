@@ -4,10 +4,13 @@ const timeElement = document.querySelector('#time-value')
 const scoreElement = document.querySelector('#score-value')
 const cardsElements = document.querySelectorAll('.back-card-image')
 const restartBtnElement = document.querySelector('#restart-btn')
-const bonusRoundElement = document.querySelector('#bonus-btn')
 const musicBtnElement = document.querySelector('#music-btn')
 const backgroundMusicElement = document.querySelector('#background-music')
-const cards=[
+const selectLevelElement = document.querySelector('#levels')
+const hardCardsElements = document.querySelector('.hard-cards')
+
+
+const easyCards=[
     {
         name:'Edogawa Conan',
         image: './assets/Conan_Edogawa.png',
@@ -81,6 +84,36 @@ const cards=[
         isMatched: false
     },
 ]
+let cards=[...easyCards]
+
+const hardCards =[
+    {
+        name:'Kazuha Toyma',
+        image: './assets/kazuha_toyama.png',
+        isFlipped: false,
+        isMatched: false
+    },
+    {
+        name:'Kazuha Toyma',
+        image: './assets/kazuha_toyama.png',
+        isFlipped: false,
+        isMatched: false
+    },
+    {
+        name:'Professor Agassa',
+        image: './assets/professor_agasa.png',
+        isFlipped: false,
+        isMatched: false
+    },
+    {
+        name:'Professor Agassa',
+        image: './assets/professor_agasa.png',
+        isFlipped: false,
+        isMatched: false
+    },
+
+]
+
 const backCardImage = './assets/back-card-image.png'
 
 //-----------------------------------Variables--------------------------------------------
@@ -93,7 +126,7 @@ let secondCardElm = null //tracks the html element of the second card
 let firstCardIndex = null //tracks the index of the first card in the cards array
 let secondCardIndex = null//tracks the index of the second card in the cards array
 
-let time = 25
+let time = 40
 let score= 0
 let timeInterval=null
 let gameOver = false //tracks if all the cards are flipped or the time has run out
@@ -120,14 +153,14 @@ function clickCard(event){
     if(gameOver || isLocked)
         return
 
-   for(let i=0; i<cardsElements.length; i++){
+   for(let i=0; i<cards.length; i++){
      if(cardsElements[i]=== clickedCard){
 
         //check if the card is already flipped or already Matched then return
         if(cards[i].isFlipped || cards[i].isMatched)
             return
-        startTimer()
 
+        startTimer()
         //else display the character
         clickedCard.classList.add('flipped')
         clickedCard.src = cards[i].image
@@ -154,7 +187,7 @@ function checkForMatch(){
     //if the names match then increase the score
  if(firstCard === secondCard){
     score++
-    scoreElement.textContent = ` ${score}`
+    scoreElement.textContent = ` ${score}/${cards.length/2}`
     cards[firstCardIndex].isMatched=true
     cards[secondCardIndex].isMatched=true
     checkGameOver()
@@ -202,8 +235,8 @@ function startTimer(){
             clearInterval(timeInterval)
             gameOver=true
             Swal.fire({
-             title: "Oh No 😕! ",
-             text: "Time Run out!",
+             title: "Oh No 😕! You ran out of time",
+             text: "Please try again!",
              background:"#F5E9D3",
              imageUrl: "./assets/msg-image.png",
              imageWidth: 200,
@@ -238,7 +271,6 @@ function checkGameOver(){
 
 function restartGame(){
  clearInterval(timeInterval)
- shuffelCards()
  firstCard = null
  secondCard = null 
 
@@ -248,20 +280,36 @@ function restartGame(){
  firstCardIndex = null 
  secondCardIndex = null
 
- time = 25
+ time = 40
  score= 0
  timeInterval=null
  gameOver = false 
  isLocked= false
 
- for(let i=0; i<cards.length; i++){
+ for(let i=0; i<cardsElements.length; i++){
     cardsElements[i].src= backCardImage
+    cardsElements[i].classList.remove('flipped')
+}
+for(let i=0; i<cards.length;i++){
     cards[i].isFlipped = false
-    cards[i].isMatched=false
- }
+    cards[i].isMatched=false}
+ 
  timeElement.textContent = time
- scoreElement.textContent = score
+ scoreElement.textContent = `${score}/${cards.length/2}`
+  shuffelCards()
+}
 
+function changeLevels(){
+    cards = [...easyCards]
+
+    if(selectLevelElement.value === 'Hard'){
+        cards.push(...hardCards)
+        hardCardsElements.classList.add('show')
+    }
+    else{
+        hardCardsElements.classList.remove('show')
+    }
+    restartGame()
 }
 
 let isMusicPlaying = true
@@ -290,7 +338,8 @@ for(let i=0; i<cardsElements.length; i++){
 
 restartBtnElement.addEventListener('click',restartGame)
 musicBtnElement.addEventListener('click',toggleMusic)
+selectLevelElement.addEventListener('change',changeLevels)
+changeLevels()
 
-shuffelCards()
 
 

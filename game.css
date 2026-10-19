@@ -122,7 +122,7 @@ body{
     display: grid;
     grid-template-columns: repeat(4,100px);
     grid-template-rows: repeat(3,100px);
-    row-gap: 80px;
+    row-gap: 100px;
     column-gap: 80px;
     align-content: center;
     justify-content: center;
@@ -132,7 +132,7 @@ body{
  /* Some of this code is inspired by understanding these concepts
   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition */
  .back-card-image{
-  height: 185px;
+  height: 190px;
   width: 158px;
   transition:  0.3s ease ;
  }
@@ -205,10 +205,31 @@ body{
    color: #B51F35;
    font-weight: 600;
    font-family: "Inter", sans-serif ;
+   font-size: 15px;
  }
 
-#music-btn-div{
+#music-levels-div{
    display: flex;
    flex-direction: row-reverse;
-   margin-right:100px ;
+   margin-right:70px ;
+}
+
+#levels{
+   height: 50px;
+   width: 120px;
+   border-radius: 10px;
+   margin: 10px;
+   background-color: #F5E9D3;
+   border: none;
+   color: #B51F35;
+   font-weight: 600;
+   font-family: "Inter", sans-serif ;
+   text-align: center;
+   font-size: 25px;
+}
+.hard-cards{
+ display: none;
+}
+.hard-cards.show{
+   display: contents;
 }
