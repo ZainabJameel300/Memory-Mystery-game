@@ -93,7 +93,7 @@ let secondCardElm = null //tracks the html element of the second card
 let firstCardIndex = null //tracks the index of the first card in the cards array
 let secondCardIndex = null//tracks the index of the second card in the cards array
 
-let time = 45
+let time = 25
 let score= 0
 let timeInterval=null
 let gameOver = false //tracks if all the cards are flipped or the time has run out
@@ -248,7 +248,7 @@ function restartGame(){
  firstCardIndex = null 
  secondCardIndex = null
 
- time = 45
+ time = 25
  score= 0
  timeInterval=null
  gameOver = false 

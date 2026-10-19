@@ -1,6 +1,6 @@
 # Memory Mystery Game
 
-## Overview
+## Description
 A Detective Conan-inspired memory game where players match character pairs within 45 seconds and test their Detective Conan knowledge in a bonus round.
 
 ## Technologies used
@@ -24,7 +24,17 @@ A Detective Conan-inspired memory game where players match character pairs withi
 
 ![Welcome page of the memory mystery game](./prototype/MM-prototype2.png)
 
-## Refrences
+## Screenshots
+![Welcome page](./Screenshots/Welcome-page.png)
+
+![Game Page](./Screenshots/Game-page.png)
+
+![Game Page Bottom](./Screenshots/Game-page-bottom.png)
+
+## Future Enhancements
+1. Add a bonus round where the user can gain extra points by answering some detective conan trivia questions
+
+## Credits
  1. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-position , this refrence was used for fixing the postion of the decorative images in the pages
  
  2. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp this refrence was used for fixing the postion of the decorative images in the pages
@@ -32,5 +42,7 @@ A Detective Conan-inspired memory game where players match character pairs withi
  3. https://sweetalert2.github.io/ this refrence was used to display winning and losing messages
 
  4. https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay? , https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio? These refrences were used for the adding of the audio (background music)
+
+ 5. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition used for card flipping transtion 
 
 

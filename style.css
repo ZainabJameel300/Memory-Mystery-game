@@ -129,6 +129,8 @@ body{
     align-items: center;
     
  }
+ /* Some of this code is inspired by understanding these concepts
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition */
  .back-card-image{
   height: 185px;
   width: 158px;
