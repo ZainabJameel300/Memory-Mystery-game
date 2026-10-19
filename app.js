@@ -129,8 +129,8 @@ function clickCard(event){
         startTimer()
 
         //else display the character
+        clickedCard.classList.add('flipped')
         clickedCard.src = cards[i].image
-
         //change the isFlipped to true
         cards[i].isFlipped=true
 
@@ -174,6 +174,8 @@ function checkForMatch(){
 }
  
 function timeOutFunction(){
+    firstCardElm.classList.remove('flipped')
+    secondCardElm.classList.remove('flipped')
     firstCardElm.src=backCardImage
     secondCardElm.src=backCardImage
     cards[firstCardIndex].isFlipped=false
@@ -262,7 +264,7 @@ function restartGame(){
 
 }
 
-let isMusicPlaying = false
+let isMusicPlaying = true
 
 function toggleMusic(){
     if(isMusicPlaying===true){

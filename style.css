@@ -132,6 +132,10 @@ body{
  .back-card-image{
   height: 185px;
   width: 158px;
+  transition:  0.3s ease ;
+ }
+ .back-card-image.flipped{
+   transform: rotateY(180deg);
  }
 
  .msg-btn{
