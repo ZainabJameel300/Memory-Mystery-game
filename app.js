@@ -5,6 +5,8 @@ const scoreElement = document.querySelector('#score-value')
 const cardsElements = document.querySelectorAll('.back-card-image')
 const restartBtnElement = document.querySelector('#restart-btn')
 const bonusRoundElement = document.querySelector('#bonus-btn')
+const musicBtnElement = document.querySelector('#music-btn')
+const backgroundMusicElement = document.querySelector('#background-music')
 const cards=[
     {
         name:'Edogawa Conan',
@@ -260,6 +262,23 @@ function restartGame(){
 
 }
 
+let isMusicPlaying = false
+
+function toggleMusic(){
+    if(isMusicPlaying===true){
+      backgroundMusicElement.pause()
+      isMusicPlaying = false
+      musicBtnElement.textContent = '🎶 Music: Off'
+    }
+    else{
+        backgroundMusicElement.play()
+        isMusicPlaying=true
+        musicBtnElement.textContent = '🎶 Music: On'
+    }
+}
+
+backgroundMusicElement.volume= 0.25
+
 
 
 //------------------------------------------EventListners--------------------------------
@@ -268,6 +287,7 @@ for(let i=0; i<cardsElements.length; i++){
 }
 
 restartBtnElement.addEventListener('click',restartGame)
+musicBtnElement.addEventListener('click',toggleMusic)
 
 shuffelCards()
 

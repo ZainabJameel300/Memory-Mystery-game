@@ -31,6 +31,6 @@ A Detective Conan-inspired memory game where players match character pairs withi
 
  3. https://sweetalert2.github.io/ this refrence was used to display winning and losing messages
 
- 4. 
+ 4. https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay? , https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio? These refrences were used for the adding of the audio (background music)
 
 

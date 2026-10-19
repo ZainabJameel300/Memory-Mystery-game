@@ -189,3 +189,20 @@ body{
  #bottom-dash{
    width: 150px;
  }
+ #music-btn{
+   height: 50px;
+   width: 120px;
+   border-radius: 10px;
+   margin: 10px;
+   background-color: #F5E9D3;
+   border: none;
+   color: #B51F35;
+   font-weight: 600;
+   font-family: "Inter", sans-serif ;
+ }
+
+#music-btn-div{
+   display: flex;
+   flex-direction: row-reverse;
+   margin-right:100px ;
+}
