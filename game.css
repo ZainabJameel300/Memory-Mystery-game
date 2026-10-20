@@ -7,6 +7,78 @@ body{
     padding: 0;
     background-color: #101F35;
 }
+
+/*--------------------------- Dark Mode -----------------------------*/
+
+body.dark-mode {
+    background-color: #101F35;
+}
+
+body.dark-mode #time-div,
+body.dark-mode #score-div {
+    background-color: #F5E9D3;
+}
+
+body.dark-mode .title-dash {
+    border-top: 1px solid #F5E9D3;
+}
+
+body.dark-mode h1 {
+    color: #F5E9D3;
+}
+
+body.dark-mode #restart-btn {
+    background-color: #B51F35;
+    color: white;
+}
+
+body.dark-mode a {
+    color: white;
+}
+
+body.dark-mode #music-btn,
+body.dark-mode #levels,
+body.dark-mode #mode-btn {
+    background-color: #F5E9D3;
+    color: #B51F35;
+}
+
+
+/*--------------------------- Light Mode -----------------------------*/
+
+body.light-mode {
+    background-color: #F5E9D3;
+}
+
+body.light-mode #time-div,
+body.light-mode #score-div {
+    background-color: #101F35;
+}
+
+body.light-mode .title-dash {
+    border-top: 1px solid #101F35;
+}
+
+body.light-mode h1 {
+    color: #101F35;
+}
+
+body.light-mode #restart-btn {
+    background-color: #B51F35;
+    color: #F5E9D3;
+}
+
+body.light-mode a {
+    color: #101F35;
+}
+
+body.light-mode #music-btn,
+body.light-mode #levels,
+body.light-mode #mode-btn {
+    background-color: #101F35;
+    color: #F5E9D3;
+}
+
 .top-section{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -199,11 +271,11 @@ body{
     margin: 0;
    
   }
- #time-value,#score-value{
+ /* #time-value,#score-value{
    color: #B51F35;
    font-family: "Protest Guerrilla", sans-serif;
    
- }
+ } */
  #bottom-dash{
    width: 150px;
  }
@@ -244,4 +316,17 @@ body{
 }
 .hard-cards.show{
    display: contents;
+}
+
+#mode-btn{
+   height: 50px;
+   width: 120px;
+   border-radius: 10px;
+   margin: 10px;
+   background-color: #F5E9D3;
+   border: none;
+   color: #B51F35;
+   font-weight: 600;
+   font-family: "Inter", sans-serif ;
+   font-size: 15px;
 }

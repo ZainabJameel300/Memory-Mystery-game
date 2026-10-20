@@ -8,6 +8,7 @@ const musicBtnElement = document.querySelector('#music-btn')
 const backgroundMusicElement = document.querySelector('#background-music')
 const selectLevelElement = document.querySelector('#levels')
 const hardCardsElements = document.querySelector('.hard-cards')
+const darkModeElement = document.querySelector('#mode-btn')
 
 
 const easyCards=[
@@ -327,6 +328,10 @@ function changeLevels(){
 
 let isMusicPlaying = true
 
+window.onload = function() {
+    backgroundMusicElement.play()
+}
+
 function toggleMusic(){
     if(isMusicPlaying===true){
       backgroundMusicElement.pause()
@@ -347,8 +352,17 @@ backgroundMusicElement.volume= 0.20
 // Retrieved 2026-10-20, License - CC BY-SA 3.0
 // -->
 
-window.onload = function() {
-    document.getElementById("background-music").play();
+function toggleMode(){
+  if(darkModeElement.textContent === 'Mode : Dark'){
+    document.body.classList.add('dark-mode')
+    document.body.classList.remove('light-mode')
+    darkModeElement.textContent ='Mode : Light'
+  }
+  else{
+    document.body.classList.add('light-mode')
+    document.body.classList.remove('dark-mode')
+    darkModeElement.textContent ='Mode : Dark'
+  }
 }
 
 
@@ -362,6 +376,7 @@ for(let i=0; i<cardsElements.length; i++){
 restartBtnElement.addEventListener('click',restartGame)
 musicBtnElement.addEventListener('click',toggleMusic)
 selectLevelElement.addEventListener('change',changeLevels)
+darkModeElement.addEventListener('click',toggleMode)
 changeLevels()
 
 
