@@ -125,12 +125,18 @@ let secondCardElm = null //tracks the html element of the second card
 
 let firstCardIndex = null //tracks the index of the first card in the cards array
 let secondCardIndex = null//tracks the index of the second card in the cards array
+let time=0
+if(selectLevelElement.value='Easy'){
+     time=30
+}
+else{
+    time=45
+}
 
-let time = 40
 let score= 0
 let timeInterval=null
 let gameOver = false //tracks if all the cards are flipped or the time has run out
-let isLocked= false
+let isLocked= false //To prevent further clicking of cards that are already matched or if the game is over
 
 
 
@@ -280,7 +286,12 @@ function restartGame(){
  firstCardIndex = null 
  secondCardIndex = null
 
- time = 40
+ if(selectLevelElement.value === 'Easy'){
+    time=30
+ }
+ else{
+    time=45
+ }
  score= 0
  timeInterval=null
  gameOver = false 
@@ -305,9 +316,11 @@ function changeLevels(){
     if(selectLevelElement.value === 'Hard'){
         cards.push(...hardCards)
         hardCardsElements.classList.add('show')
+        document.querySelector('.card-container').classList.add('hard-mode')
     }
     else{
         hardCardsElements.classList.remove('show')
+        document.querySelector('.card-container').classList.remove('hard-mode')
     }
     restartGame()
 }
