@@ -1,7 +1,7 @@
 # Memory Mystery Game
 
 ## Description
-A Detective Conan-inspired memory game where players match character pairs within 45 seconds and test their Detective Conan knowledge in a bonus round.
+A Detective Conan-inspired memory game where players match character pairs within a specific amount of time based on the level selected: easy or hard.
 
 ## Technologies used
 1. HTML
@@ -11,13 +11,13 @@ A Detective Conan-inspired memory game where players match character pairs withi
 ## User Stories
 1. As a user, I want to see a welcome page with the game title and a Start Game button so that I can begin the memory challenge.
 
-2. As a user, I want to flip over 12 cards and match the 6 pairs of identical characters so that I can test my memory and earn points.
+2. As a user, I want to choose between easy and hard level , and flip cards and match the identical characters so that I can test my memory and earn points.
 
 3. As a user, I want to see my correct-match score out of five and a countdown timer.
 
 4. As a user, I want the game to end when I match all five pairs or when the timer reaches zero.
 
-5. As a user, I want to play a bonus round of Detective Conan trivia questions on a separate page and earn extra points.
+5. As a user, I want to be able to pause the music and play it again.
 
 ## Figma Prototype
 ![Welcome page of the memory mystery game](./prototype/MM-prototype1.png)
@@ -34,6 +34,8 @@ A Detective Conan-inspired memory game where players match character pairs withi
 ## Future Enhancements
 1. Add a bonus round where the user can gain extra points by answering some detective conan trivia questions
 
+2. Add a Winning streak where it gets reseted everytime the user loses a round
+
 ## Credits
  1. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-position , this refrence was used for fixing the postion of the decorative images in the pages
  
@@ -41,7 +43,7 @@ A Detective Conan-inspired memory game where players match character pairs withi
 
  3. https://sweetalert2.github.io/ this refrence was used to display winning and losing messages
 
- 4. https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay? , https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio? These refrences were used for the adding of the audio (background music)
+ 4. https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay? , https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio? , https://stackoverflow.com/questions/14356956/playing-audio-after-the-page-loads-in-html These refrences were used for the adding of the audio (background music)
 
  5. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition used for card flipping transtion 
 
