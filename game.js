@@ -330,6 +330,7 @@ let isMusicPlaying = true
 
 window.onload = function() {
     backgroundMusicElement.play()
+    backgroundMusicElement.volume= 0.20
 }
 
 function toggleMusic(){
@@ -345,23 +346,27 @@ function toggleMusic(){
     }
 }
 
-backgroundMusicElement.volume= 0.20
+
 // <!--
 // Source - https://stackoverflow.com/a/14357365
 // Posted by Aioros
 // Retrieved 2026-10-20, License - CC BY-SA 3.0
 // -->
 
+let isDarkMode = true
+
 function toggleMode(){
-  if(darkModeElement.textContent === 'Mode : Dark'){
+  if(isDarkMode === true){
     document.body.classList.add('dark-mode')
     document.body.classList.remove('light-mode')
     darkModeElement.textContent ='Mode : Light'
+    isDarkMode = false
   }
-  else{
+  else if(isDarkMode === false){
     document.body.classList.add('light-mode')
     document.body.classList.remove('dark-mode')
     darkModeElement.textContent ='Mode : Dark'
+    isDarkMode = true
   }
 }
 

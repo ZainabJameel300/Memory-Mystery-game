@@ -11,13 +11,16 @@ A Detective Conan-inspired memory game where players match character pairs withi
 ## User Stories
 1. As a user, I want to see a welcome page with the game title and a Start Game button so that I can begin the memory challenge.
 
-2. As a user, I want to choose between easy and hard level , and flip cards and match the identical characters so that I can test my memory and earn points.
+2. As a user, I want to choose between easy and hard level modes , and flip cards and match the identical characters so that I can test my memory and earn points.
 
-3. As a user, I want to see my correct-match score out of five and a countdown timer.
+3. As a user, I want to be able to choose between dark and light mode
 
-4. As a user, I want the game to end when I match all five pairs or when the timer reaches zero.
+4. As a user, I want to be able to play and pause the background music.
 
-5. As a user, I want to be able to pause the music and play it again.
+5. As a user, I want to see my correct-match score out of 6 or 8 and a countdown timer.
+
+6. As a user, I want the game to end when I match all five pairs or when the timer reaches zero.
+
 
 ## Figma Prototype
 ![Welcome page of the memory mystery game](./prototype/MM-prototype1.png)

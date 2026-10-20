@@ -310,6 +310,7 @@ body.light-mode #mode-btn {
    font-family: "Inter", sans-serif ;
    text-align: center;
    font-size: 20px;
+   padding-right: 10px;
 }
 .hard-cards{
  display: none;
