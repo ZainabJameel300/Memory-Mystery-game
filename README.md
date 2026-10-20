@@ -30,9 +30,15 @@ A Detective Conan-inspired memory game where players match character pairs withi
 ## Screenshots
 ![Welcome page](./Screenshots/Welcome-page.png)
 
-![Game Page](./Screenshots/Game-page.png)
+![Game Page](./Screenshots/game-page-org.png)
 
 ![Game Page Bottom](./Screenshots/Game-page-bottom.png)
+
+![Game Page Bottom](./Screenshots/Game-page-hard-mode.png)
+
+![Game Page Bottom](./Screenshots/Game-page-light-mode.png)
+
+
 
 ## Future Enhancements
 1. Add a bonus round where the user can gain extra points by answering some detective conan trivia questions
