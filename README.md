@@ -32,11 +32,11 @@ A Detective Conan-inspired memory game where players match character pairs withi
 
 ![Game Page](./Screenshots/game-page-org.png)
 
-![Game Page Bottom](./Screenshots/Game-page-bottom.png)
+![Game Page Bottom](./Screenshots/game-page-bottom.png)
 
-![Game Page Bottom](./Screenshots/Game-page-hard-mode.png)
+![Game Page hard mode](./Screenshots/game-page-hard-mode.png)
 
-![Game Page Bottom](./Screenshots/Game-page-light-mode.png)
+![Game Page light mode](./Screenshots/game-page-light-mode.png)
 
 
 
